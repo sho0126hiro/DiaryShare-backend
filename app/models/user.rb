@@ -3,6 +3,7 @@ class User < ApplicationRecord
   generate_public_uid 
 
   has_many :diaries, dependent: :destroy
+  has_many :friends
   
   def to_parm
     public_uid

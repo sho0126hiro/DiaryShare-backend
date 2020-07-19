@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy, :diaries]
+  before_action :set_user, only: [:show, :update, :destroy, :diaries, :friends]
   
   # GET /users
   # GET /users.json
@@ -47,6 +47,15 @@ class UsersController < ApplicationController
       render json: {"error": "user is not found"}, status: 404
     end
   end
+
+  def friends
+    if @user != nil
+      render json: {"user_id": @user.public_uid, "friends": @user.friends}, status: :ok
+    else
+      render json: {"error": "user is not found"}, status: 404
+    end
+  end
+      
   
   private
     # Use callbacks to share common setup or constraints between actions.

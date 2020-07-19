@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :friends
   resources :login, only: [:create]
   
   resources :users do
     get 'diaries', :on => :member # GET /users/<uid>/diaries
+    get 'friends', :on => :member # GET /users/id/friends
   end
 
   resources :diaries do
