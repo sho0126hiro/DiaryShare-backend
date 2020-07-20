@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+docker-compose build up
 
-Things you may want to cover:
+本番環境へ更新するとき:
 
-* Ruby version
+docker-compose build
+heroku container:push web
+heroku container:release web
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://diaryshare-backend.herokuapp.com/

@@ -6,6 +6,6 @@ class CreateDiaryReactions < ActiveRecord::Migration[6.0]
       t.string :reaction_type, null: false
       t.timestamps
     end
-    add_index :diary_reactions [:user_id, :diary_id], unique: true
+    add_index :diary_reactions, [:user_id, :diary_id], unique: true
   end
 end
