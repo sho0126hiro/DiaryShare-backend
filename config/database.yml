@@ -18,7 +18,7 @@ default: &default
 
 development:
   <<: *default
-  encoding: utf8mb4
+  encoding: EUC_JP
   database: DiaryShare_backend_development
 
 # Warning: The database defined as "test" will be erased and
@@ -57,7 +57,6 @@ production:
   <<: *default
   adapter: postgresql
   encoding: EUC_JP # <= utf8 から utf8mb4 に変更
-  collation: utf8mb4_general_ci
   pool: 5
   url: <%= ENV['DATABASE_URL'] %>
   
