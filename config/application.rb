@@ -31,5 +31,7 @@ module DiaryShareBackend
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.api_only = true
+    config.assets.initialize_on_precompile = false
   end
 end
