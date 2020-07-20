@@ -7,3 +7,5 @@ docker-compose build up
 docker-compose build
 heroku container:push web
 heroku container:release web
+
+https://diaryshare-backend.herokuapp.com/
