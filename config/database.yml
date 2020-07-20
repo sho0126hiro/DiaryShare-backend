@@ -56,5 +56,7 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8mb4 # <= utf8 から utf8mb4 に変更
+  charset: utf8mb4 # <= 追加
+  collation: utf8mb4_general_ci # <= 追加
   pool: 5
