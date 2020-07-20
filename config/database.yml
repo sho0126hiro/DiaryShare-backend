@@ -47,8 +47,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: DiaryShare_backend_production
+#   username: DiaryShare_backend
+#   password: <%= ENV['DIARYSHARE_BACKEND_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: DiaryShare_backend_production
-  username: DiaryShare_backend
-  password: <%= ENV['DIARYSHARE_BACKEND_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
